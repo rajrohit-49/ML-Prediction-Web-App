@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Breast Cancer Prediction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #eef3f7;
+            padding: 40px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 10px;
+            font-size: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: #f9f9f9;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #4CAF50;
+            background: #fff;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.2);
+        }
+
+        .form-group label {
+            position: absolute;
+            top: -10px;
+            left: 12px;
+            background: white;
+            padding: 0 5px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .btn {
+            grid-column: span 2;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #388e3c;
+        }
+
+        .result {
+            text-align: center;
+            font-size: 20px;
+            margin-top: 30px;
+            color: #1c2833;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .btn {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="form-section">
+        <h2>Breast Cancer Prediction</h2>
+        <form id="predictForm">
+            <!-- Replace server-side templating with static JS for simplicity -->
+            <script>
+                const features = ['radius_mean', 'texture_mean', 'perimeter_mean', 'area_mean', 'smoothness_mean',
+                    'compactness_mean', 'concavity_mean', 'concave points_mean', 'symmetry_mean',
+                    'fractal_dimension_mean', 'radius_se', 'texture_se', 'perimeter_se', 'area_se',
+                    'smoothness_se', 'compactness_se', 'concavity_se', 'concave points_se',
+                    'symmetry_se', 'fractal_dimension_se', 'radius_worst', 'texture_worst',
+                    'perimeter_worst', 'area_worst', 'smoothness_worst', 'compactness_worst',
+                    'concavity_worst', 'concave points_worst', 'symmetry_worst', 'fractal_dimension_worst'];
+
+                document.addEventListener("DOMContentLoaded", function () {
+                    const form = document.getElementById("predictForm");
+                    features.forEach((feature, i) => {
+                        const div = document.createElement("div");
+                        div.className = "form-group";
+
+                        const label = document.createElement("label");
+                        label.htmlFor = `feature${i}`;
+                        label.textContent = feature.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+
+                        const input = document.createElement("input");
+                        input.type = "number";
+                        input.name = `feature${i}`;
+                        input.id = `feature${i}`;
+                        input.required = true;
+
+                        div.appendChild(label);
+                        div.appendChild(input);
+                        form.insertBefore(div, document.getElementById("submitButton"));
+                    });
+                });
+            </script>
+            <button type="submit" class="btn" id="submitButton">Predict</button>
+        </form>
+    </div>
+
+    <div id="result-section" class="hidden">
+        <h2>Prediction Result</h2>
+        <div class="result" id="predictionOutput">
+            <!-- Result will appear here -->
+        </div>
+        <button class="btn" onclick="goBack()">Go Back</button>
+    </div>
+</div>
+
+<script>
+    document.getElementById("predictForm").addEventListener("submit", function (e) {
+        e.preventDefault(); // prevent actual form submission
+
+        // Collect form data (simulate prediction result)
+        const values = Array.from(document.querySelectorAll("input")).map(i => parseFloat(i.value));
+        
+        // Simulated prediction logic (replace with real fetch call if needed)
+        const simulatedResult = values.reduce((a, b) => a + b, 0) > 1000 ? 
+            "High risk of breast cancer" : "Low risk of breast cancer";
+
+        document.getElementById("predictionOutput").textContent = simulatedResult;
+
+        // Toggle sections
+        document.getElementById("form-section").classList.add("hidden");
+        document.getElementById("result-section").classList.remove("hidden");
+    });
+
+    function goBack() {
+        document.getElementById("result-section").classList.add("hidden");
+        document.getElementById("form-section").classList.remove("hidden");
+    }
+</script>
+</body>
+</html>
