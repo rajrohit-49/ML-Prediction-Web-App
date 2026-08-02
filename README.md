@@ -183,11 +183,7 @@ Prediction
 > Add a screenshot here.
 
 ```
-## 📸 Home Page
-
-## 📸 Home Page
-
-![Home Page](image/home.png)
+https://github.com/rajrohit-49/ML-Prediction-Web-App/commit/7d7b3bf549539e970a3f907ae4f87dd09733a2a9#diff-11e07413c7873ac1cb45b232cc8d8f01204b402fc107e83a66d6e5e7de010772
 ```
 
 ---
