@@ -185,6 +185,8 @@ Prediction
 ```
 ## 📸 Home Page
 
+## 📸 Home Page
+
 ![Home Page](image/home.png)
 ```
 
