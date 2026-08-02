@@ -183,7 +183,9 @@ Prediction
 > Add a screenshot here.
 
 ```
-image/home.png
+## 📸 Home Page
+
+![Home Page](image/home.png)
 ```
 
 ---
