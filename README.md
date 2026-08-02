@@ -183,7 +183,7 @@ Prediction
 > Add a screenshot here.
 
 ```
-images/home.png
+image/home.png
 ```
 
 ---
