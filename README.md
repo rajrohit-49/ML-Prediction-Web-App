@@ -2,8 +2,6 @@
 
 <p align="center">
 
-# 🩺 Breast Cancer Prediction using Machine Learning
-
 ### An Intelligent Web Application for Early Breast Cancer Detection using Machine Learning
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
