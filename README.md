@@ -44,20 +44,23 @@ The application provides a clean, responsive web interface where users can enter
 # 📷 Screenshots
 
 ## 🏠 Home Page
-<p align="center">
-<img src="screenshots/home.png" width="900">
-</p>
 
-<p align="center">
-<img src="screenshots/input-form.png" width="900">
-</p>
-
-<p align="center">
-<img src="screenshots/prediction-result.png" width="900">
-</p>
-
+<img src="screenshots/home.png" width="100%">
 
 ---
+
+## 📝 Input Form
+
+<img src="screenshots/input-form.png" width="100%">
+
+---
+
+## 📊 Prediction Result
+
+<img src="screenshots/prediction-result.png" width="100%">
+
+---
+
 
 # 🧠 Machine Learning Algorithms
 
