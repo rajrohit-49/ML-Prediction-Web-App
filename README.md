@@ -359,7 +359,7 @@ pip install -r requirements.txt
 
 Machine Learning Enthusiast | Python Developer | AI & Data Science
 
-GitHub: https://github.com/your-username
+GitHub: https://github.com/rajrohit-49
 
 LinkedIn: https:www.linkedin.com/in/rohitk-cse
 
