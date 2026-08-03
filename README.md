@@ -361,7 +361,10 @@ Machine Learning Enthusiast | Python Developer | AI & Data Science
 
 GitHub: https://github.com/your-username
 
-LinkedIn: https://linkedin.com/in/your-profile
+LinkedIn: https:www.linkedin.com/in/rohitk-cse
+
+
+
 
 ---
 
