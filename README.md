@@ -45,7 +45,7 @@ The application provides a clean, responsive web interface where users can enter
 
 ## 🏠 Home Page
 
-<img src="screenshots/home.png" width="100%">
+<img src="screenshots/https://github.com/rajrohit-49/ML-Prediction-Web-App/blob/main/image/home.png width="100%">
 
 ---
 
